@@ -3,17 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.hsmak</groupId>
-    <artifactId>initializer-2.x</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
-
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.1</version>
+        <groupId>org.hsmak</groupId>
+        <artifactId>maven-parent-poms</artifactId>
+        <version>1.0</version>
     </parent>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-repository</id>
+            <url>file://${project.basedir}/..</url>
+        </repository>
+    </distributionManagement>
+
+    <groupId>org.hsmak</groupId>
+    <artifactId>spring-boot_2.x-pom</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
 
     <name>${project.artifactId}</name>
 
