@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.hsmak</groupId>
-  <artifactId>maven-parent-poms</artifactId>
+  <artifactId>spring-boot_2.x-pom-parent</artifactId>
   <versioning>
     <release>1.0</release>
     <versions>

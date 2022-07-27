@@ -4,25 +4,27 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.22.RELEASE</version>
+        <relativePath/>
+    </parent>
+
     <distributionManagement>
         <repository>
             <id>maven-repository</id>
-            <url>file://${project.basedir}/_repo</url>
+            <url>file://${project.basedir}/../../_repo</url>
         </repository>
     </distributionManagement>
 
     <groupId>org.hsmak</groupId>
-    <artifactId>maven-parent-poms</artifactId>
+    <artifactId>spring-boot_1.x-pom-parent</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>java_17-pom</module>
-        <module>spring-boot_2.x-pom/_pom-parent/_pom-parent.xml</module>
-        <module>spring-boot_1.x-pom/_pom-parent/_parent-pom.xml</module>
-        <module>spring-framework_5.x-pom</module>
-        <module>spark_3.3-pom</module>
-        <module>scala_2.13-pom</module>
+        <module>../</module>
     </modules>
 
 </project>
