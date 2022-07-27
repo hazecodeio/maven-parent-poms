@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.hsmak</groupId>
+        <artifactId>spring-boot_2.x-pom-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>./_pom-parent/_pom-parent.xml</relativePath>
+    </parent>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-repository</id>
+            <url>file://${project.basedir}/../_repo</url>
+        </repository>
+    </distributionManagement>
+
+    <groupId>org.hsmak</groupId>
+    <artifactId>spring-boot_2.x-pom</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+
+    <!--<modules>
+        <module>bootable-2-concurrency</module>
+        <module>bootable-2-rest</module>
+        <module>bootable-2-data-jdbc</module>
+        <module>bootable-2-data-jpa</module>
+        <module>bootable-2-customized</module>
+        <module>bootable-2-mvc</module>
+        <module>bootable-2-reactive</module>
+        <modle>bootable-2-jms-activemq</modle>
+        <module>bootable-2-kafka</module>
+    </modules>-->
+    <properties>
+        <!--common-->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>11</java.version>
+        <encoding>UTF-8</encoding>
+
+        <!--java-based-->
+        <!--<hibernate.version>5.4.20.Final</hibernate.version>-->
+
+        <!--test-->
+        <junit4.version>4.13.1</junit4.version>
+        <junit5.version>5.7.0</junit5.version>
+        <surefire.version>3.0.0-M5</surefire.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit4.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.18.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions> <!--exclusion to allow surefire plugin to run-->
+                <exclusion>
+                    <artifactId>junit-jupiter</artifactId>
+                    <groupId>org.junit.jupiter</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>junit-vintage-engine</artifactId>
+                    <groupId>org.junit.vintage</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>mockito-junit-jupiter</artifactId>
+                    <groupId>org.mockito</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
