@@ -178,6 +178,7 @@
                 <!-- see http://davidb.github.com/scala-maven-plugin -->
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
+                <version>4.7.0</version>
                 <configuration>
                     <recompileMode>incremental</recompileMode>
                 </configuration>
@@ -212,7 +213,7 @@
                 <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
-                    <version>4.5.6</version>
+                    <version>4.7.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -227,6 +228,9 @@
                     <groupId>org.scalatest</groupId>
                     <artifactId>scalatest-maven-plugin</artifactId>
                     <version>2.0.2</version>
+                    <configuration>
+                        <parallel>true</parallel>
+                    </configuration>
                     <executions>
                         <execution>
                             <id>test</id>
