@@ -29,21 +29,21 @@
         <encoding>UTF-8</encoding>
 
         <!--scala-->
-        <scala.version>2.13.8</scala.version>
+        <scala.version>2.13.10</scala.version>
         <scala.compat.version>2.13</scala.compat.version>
         <scala.parallel.version>1.0.4</scala.parallel.version>
 
         <!--spark-->
-        <spark.version>3.3.0</spark.version>
+        <spark.version>3.3.2</spark.version>
 
         <!--test - scalatest/spec-->
-        <spec2.version>4.15.0</spec2.version>
-        <scalatest.version>3.2.12</scalatest.version>
+        <spec2.version>4.20.0</spec2.version>
+        <scalatest.version>3.2.15</scalatest.version>
 
         <!--test - junit-->
         <junit4.version>4.13.2</junit4.version>
-        <junit5-jupiter.version>5.8.2</junit5-jupiter.version>
-        <log4j2.version>2.18.0</log4j2.version>
+        <junit5-jupiter.version>5.9.2</junit5-jupiter.version>
+        <log4j2.version>2.20.0</log4j2.version>
     </properties>
 
     <!--
@@ -178,7 +178,7 @@
                 <!-- see http://davidb.github.com/scala-maven-plugin -->
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.7.0</version>
+                <version>4.8.1</version>
                 <configuration>
                     <recompileMode>incremental</recompileMode>
                 </configuration>
@@ -213,7 +213,7 @@
                 <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
-                    <version>4.7.0</version>
+                    <version>4.8.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -227,7 +227,7 @@
                 <plugin>
                     <groupId>org.scalatest</groupId>
                     <artifactId>scalatest-maven-plugin</artifactId>
-                    <version>2.0.2</version>
+                    <version>2.2.0</version>
                     <configuration>
                         <parallel>true</parallel>
                     </configuration>
@@ -247,12 +247,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.11.0</version>
+                    <version>3.12.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.2.2</version>
+                    <version>3.4.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
