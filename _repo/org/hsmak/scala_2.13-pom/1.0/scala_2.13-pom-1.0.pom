@@ -46,7 +46,7 @@
 
         <!-- test - junit -->
         <junit4.version>4.13.2</junit4.version>
-        <junit5-jupiter.version>5.9.2</junit5-jupiter.version>
+        <junit5.version>5.9.3</junit5.version>
         <log4j2.version>2.20.0</log4j2.version>
     </properties>
 
@@ -99,13 +99,13 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit5-jupiter.version}</version>
+            <version>${junit5.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit5-jupiter.version}</version>
+            <version>${junit5.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
