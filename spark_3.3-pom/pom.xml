@@ -35,6 +35,7 @@
 
         <!--spark-->
         <spark.version>3.3.2</spark.version>
+        <opencsv.version>2.4</opencsv.version>
 
         <!--test - scalatest/spec-->
         <spec2.version>4.20.0</spec2.version>
@@ -43,6 +44,7 @@
         <!--test - junit-->
         <junit4.version>4.13.2</junit4.version>
         <junit5.version>5.9.3</junit5.version>
+
         <log4j2.version>2.20.0</log4j2.version>
     </properties>
 
@@ -120,7 +122,7 @@
         <dependency>
             <groupId>au.com.bytecode</groupId>
             <artifactId>opencsv</artifactId>
-            <version>2.4</version>
+            <version>${opencsv.version}</version>
         </dependency>
 
         <dependency>
@@ -144,13 +146,33 @@
             <version>${log4j2.version}</version>
         </dependency>
 
-        <!-- Test -->
+        <!--Unit Testing-->
+        <!--JUnit 4.x-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit4.version}</version>
             <scope>test</scope>
         </dependency>
+        <!--JUnit 5.x-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>-->
+
         <dependency>
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_${scala.compat.version}</artifactId>
@@ -170,6 +192,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--JUnit5-->
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit5.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
 
