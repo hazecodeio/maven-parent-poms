@@ -23,35 +23,41 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <!-- common -->
-
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <!--common-->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
         <encoding>UTF-8</encoding>
 
         <!-- scala lang -->
-        <scala.version>2.13.13</scala.version>
+        <scala.version>2.13.14</scala.version>
         <scala.compat.version>2.13</scala.compat.version>
         <scala.parallel.version>1.0.4</scala.parallel.version>
 
         <!--scala tools-->
-        <scala.xml.version>2.2.0</scala.xml.version>
+        <scala.xml.version>2.3.0</scala.xml.version>
         <scalaj.http.version>2.4.2</scalaj.http.version>
         <play.major.release>3</play.major.release>
-        <play.version>3.0.2</play.version>
-        <cats.version>2.10.0</cats.version>
+        <play.version>3.0.5</play.version>
+        <cats.version>2.12.0</cats.version>
 
         <!-- test - scalatest/specs -->
-        <specs2.version>4.20.5</specs2.version>
-        <scalatest.version>3.2.18</scalatest.version>
+        <specs2.version>4.20.8</specs2.version>
+        <scalatest.version>3.2.19</scalatest.version>
 
         <!-- test - junit -->
         <junit4.version>4.13.2</junit4.version>
-        <junit5.version>5.10.2</junit5.version>
+        <junit5.version>5.11.0</junit5.version>
 
         <!-- Log -->
         <log4j2.version>2.23.1</log4j2.version>
+
+        <!-- plugins -->
+        <scala-maven-plugin.version>4.9.2</scala-maven-plugin.version>
+        <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
+        <scalatest-maven-plugin.version>2.2.0</scalatest-maven-plugin.version>
+        <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
+        <maven-project-info-reports-plugin.version>3.6.2</maven-project-info-reports-plugin.version>
     </properties>
 
     <dependencies>
@@ -167,7 +173,7 @@
                 <!-- see http://davidb.github.com/scala-maven-plugin -->
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.8.1</version>
+                <version>${scala-maven-plugin.version}</version>
                 <configuration>
                     <recompileMode>incremental</recompileMode>
                 </configuration>
@@ -202,13 +208,13 @@
                 <plugin>
                     <groupId>net.alchim31.maven</groupId>
                     <artifactId>scala-maven-plugin</artifactId>
-                    <version>4.8.1</version>
+                    <version>${scala-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <!--<version>3.0.0-M5</version>-->
-                    <version>3.2.5</version>
+                    <version>${maven-surefire-plugin.version}</version>
                     <configuration>
                         <!-- Tests will be run with scalatest-maven-plugin instead -->
                         <skipTests>true</skipTests>
@@ -217,7 +223,7 @@
                 <plugin>
                     <groupId>org.scalatest</groupId>
                     <artifactId>scalatest-maven-plugin</artifactId>
-                    <version>2.2.0</version>
+                    <version>${scalatest-maven-plugin.version}</version>
                     <configuration>
                         <parallel>true</parallel>
                     </configuration>
@@ -237,12 +243,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.12.1</version>
+                    <version>${maven-site-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.5.0</version>
+                    <version>${maven-project-info-reports-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
