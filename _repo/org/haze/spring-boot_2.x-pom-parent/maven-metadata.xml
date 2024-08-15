@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.haze</groupId>
+  <artifactId>spring-boot_2.x-pom-parent</artifactId>
+  <versioning>
+    <release>1.0</release>
+    <versions>
+      <version>1.0</version>
+    </versions>
+    <lastUpdated>20240815162758</lastUpdated>
+  </versioning>
+</metadata>
