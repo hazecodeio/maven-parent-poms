@@ -23,6 +23,7 @@
         <module>spring-framework_5.x-pom</module>
         <module>spark_3.5-pom</module>
         <module>scala_2.13-pom</module>
+        <module>scala3_lts-pom</module>
     </modules>
 
 </project>
