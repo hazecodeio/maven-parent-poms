@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -25,34 +26,36 @@
 
     <properties>
         <!--common-->
+
+        <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.release>17</maven.compiler.release>
-        <java.version>17</java.version>
         <encoding>UTF-8</encoding>
 
-        <!--java-based-->
-        <spring.version>6.1.12</spring.version>
-        <hibernate.version>6.6.0.Final</hibernate.version>
-        <derby.version>10.17.1.0</derby.version>
-        <commons-io.version>2.16.1</commons-io.version>
-        <commons-lang3.version>3.16.0</commons-lang3.version>
-        <commons-collections4.version>4.5.0-M2</commons-collections4.version>
+        <!--java-based utils-->
+        <spring.version>6.1.12</spring.version> <!--ToDo - Remove from core pom.xml-->
+        <hibernate.version>6.6.0.Final</hibernate.version> <!--ToDo - Remove from core pom.xml-->
+        <derby.version>10.17.1.0</derby.version> <!--ToDo - Remove from core pom.xml-->
+
+        <commons-io.version>2.18.0</commons-io.version>
+        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <commons-collections4.version>4.5.0-M3</commons-collections4.version>
 
         <!-- Log -->
-        <log4j2.version>2.23.1</log4j2.version>
+        <log4j2.version>2.23.1</log4j2.version>  <!--ToDo - Remove from core pom.xml-->
 
         <!-- test -->
         <junit4.version>4.13.2</junit4.version>
-        <junit5.version>5.11.0</junit5.version>
-        <assertj.version>3.26.3</assertj.version>
+        <junit5.version>5.11.4</junit5.version>
+        <assertj.version>3.27.1</assertj.version>
         <hamcrest.version>3.0</hamcrest.version>
 
         <!-- plugins -->
-        <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
-        <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
-        <maven-project-info-reports-plugin.version>3.6.2</maven-project-info-reports-plugin.version>
-        <maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
+        <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
+        <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
+        <maven-project-info-reports-plugin.version>3.8.0</maven-project-info-reports-plugin.version>
+        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
     </properties>
 
     <dependencies>
@@ -101,17 +104,21 @@
 
     <dependencyManagement>
         <dependencies>
+            
+            <!--ToDo - Remove from core pom.xml-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
                 <scope>test</scope>
             </dependency>
+            <!--ToDo - Remove from core pom.xml-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <!--ToDo - Remove from core pom.xml-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
@@ -119,18 +126,22 @@
             </dependency>
 
 
+            <!--ToDo - Remove from core pom.xml-->
             <!--MySQL-->
             <!--<dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.21</version>
             </dependency>-->
+
+            <!--ToDo - Remove from core pom.xml-->
             <!--Derby-->
             <dependency>
                 <groupId>org.apache.derby</groupId>
                 <artifactId>derby</artifactId>
                 <version>${derby.version}</version>
             </dependency>
+            <!--ToDo - Remove from core pom.xml-->
             <dependency>
                 <groupId>org.apache.derby</groupId>
                 <artifactId>derbytools</artifactId>
@@ -165,6 +176,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <finalName>${project.name}</finalName>
         <!--<pluginManagement>
