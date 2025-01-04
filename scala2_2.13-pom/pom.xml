@@ -1,5 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,7 +18,7 @@
         </repository>
     </distributionManagement>
 
-    <artifactId>scala_2.13-pom</artifactId>
+    <artifactId>scala2_2.13-pom</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
 
@@ -30,34 +32,36 @@
         <encoding>UTF-8</encoding>
 
         <!-- scala lang -->
-        <scala.version>2.13.14</scala.version>
+        <scala.version>2.13.15</scala.version>
         <scala.compat.version>2.13</scala.compat.version>
-        <scala.parallel.version>1.0.4</scala.parallel.version>
+        <scala.parallel.version>1.1.0</scala.parallel.version>
 
         <!--scala tools-->
         <scala.xml.version>2.3.0</scala.xml.version>
-        <scalaj.http.version>2.4.2</scalaj.http.version>
-        <play.major.release>3</play.major.release>
-        <play.version>3.0.5</play.version>
+        <scalaj.http.version>2.4.2</scalaj.http.version> <!--ToDo - Deprecated-->
         <cats.version>2.12.0</cats.version>
 
+        <play.major.release>3</play.major.release> <!--ToDo - Separate from core pom.xml-->
+        <play.version>3.0.6</play.version> <!--ToDo - Separate from core pom.xml-->
+
+
         <!-- test - scalatest/specs -->
-        <specs2.version>4.20.8</specs2.version>
+        <specs2.version>4.20.9</specs2.version>
         <scalatest.version>3.2.19</scalatest.version>
 
         <!-- test - junit -->
         <junit4.version>4.13.2</junit4.version>
-        <junit5.version>5.11.0</junit5.version>
+        <junit5.version>5.11.4</junit5.version>
 
         <!-- Log -->
-        <log4j2.version>2.23.1</log4j2.version>
+        <log4j2.version>2.23.1</log4j2.version> <!--ToDo - Remove Java util tool-->
 
         <!-- plugins -->
         <scala-maven-plugin.version>4.9.2</scala-maven-plugin.version>
-        <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
         <scalatest-maven-plugin.version>2.2.0</scalatest-maven-plugin.version>
-        <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
-        <maven-project-info-reports-plugin.version>3.6.2</maven-project-info-reports-plugin.version>
+        <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
+        <maven-project-info-reports-plugin.version>3.8.0</maven-project-info-reports-plugin.version>
     </properties>
 
     <dependencies>
@@ -70,12 +74,12 @@
         </dependency>
         <dependency>
             <groupId>org.scala-lang.modules</groupId>
-            <artifactId>scala-parallel-collections_2.13</artifactId>
+            <artifactId>scala-parallel-collections_${scala.compat.version}</artifactId>
             <version>${scala.parallel.version}</version>
         </dependency>
         <dependency>
             <groupId>org.typelevel</groupId>
-            <artifactId>cats-core_2.13</artifactId>
+            <artifactId>cats-core_${scala.compat.version}</artifactId>
             <version>${cats.version}</version>
         </dependency>
 
@@ -133,22 +137,19 @@
                 <artifactId>scala-xml_${scala.compat.version}</artifactId>
                 <version>${scala.xml.version}</version>
             </dependency>
+
+            <!--ToDo - Deprecated-->
             <dependency>
                 <groupId>org.scalaj</groupId>
                 <artifactId>scalaj-http_${scala.compat.version}</artifactId>
                 <version>${scalaj.http.version}</version>
             </dependency>
+
+            <!--ToDo - Separate from cor pom.xml-->
             <dependency>
                 <groupId>org.playframework</groupId>
                 <artifactId>play_${play.major.release}</artifactId>
                 <version>${play.version}</version>
-            </dependency>
-
-            <!--spring-->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-core</artifactId>
-                <version>${spring.version}</version>
             </dependency>
 
             <!--JUnit5-->

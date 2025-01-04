@@ -16,7 +16,7 @@
         </repository>
     </distributionManagement>
 
-    <artifactId>scala3_lts-pom</artifactId>
+    <artifactId>scala3-lts-pom</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
 
@@ -38,26 +38,22 @@
         <scala.xml.version>2.3.0</scala.xml.version>
         <scalaj.http.version>2.4.2</scalaj.http.version>
         <play.major.release>3</play.major.release>
-        <play.version>3.0.5</play.version>
         <cats.version>2.12.0</cats.version>
 
         <!-- test - scalatest/specs -->
-        <specs2.version>4.20.8</specs2.version>
+        <specs2.version>5.5.8</specs2.version>
         <scalatest.version>3.2.19</scalatest.version>
 
         <!-- test - junit -->
         <junit4.version>4.13.2</junit4.version>
-        <junit5.version>5.11.0</junit5.version>
-
-        <!-- Log -->
-        <log4j2.version>2.23.1</log4j2.version>
+        <junit5.version>5.11.4</junit5.version>
 
         <!-- plugins -->
         <scala-maven-plugin.version>4.9.2</scala-maven-plugin.version>
-        <maven-surefire-plugin.version>3.3.0</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
         <scalatest-maven-plugin.version>2.2.0</scalatest-maven-plugin.version>
-        <maven-site-plugin.version>4.0.0-M16</maven-site-plugin.version>
-        <maven-project-info-reports-plugin.version>3.6.2</maven-project-info-reports-plugin.version>
+        <maven-site-plugin.version>3.21.0</maven-site-plugin.version>
+        <maven-project-info-reports-plugin.version>3.8.0</maven-project-info-reports-plugin.version>
     </properties>
 
     <dependencies>
@@ -70,12 +66,12 @@
         </dependency>
         <dependency>
             <groupId>org.scala-lang.modules</groupId>
-            <artifactId>scala-parallel-collections_3</artifactId>
+            <artifactId>scala-parallel-collections_${scala.compat.version}</artifactId>
             <version>${scala.parallel.version}</version>
         </dependency>
         <dependency>
             <groupId>org.typelevel</groupId>
-            <artifactId>cats-core_2.13</artifactId>
+            <artifactId>cats-core_${scala.compat.version}</artifactId>
             <version>${cats.version}</version>
         </dependency>
 
@@ -134,16 +130,6 @@
                 <groupId>org.scala-lang.modules</groupId>
                 <artifactId>scala-xml_${scala.compat.version}</artifactId>
                 <version>${scala.xml.version}</version>
-            </dependency>
-            <!--<dependency>
-                <groupId>org.scalaj</groupId>
-                <artifactId>scalaj-http_${scala.compat.version}</artifactId>
-                <version>${scalaj.http.version}</version>
-            </dependency>-->
-            <dependency>
-                <groupId>org.playframework</groupId>
-                <artifactId>play_${play.major.release}</artifactId>
-                <version>${play.version}</version>
             </dependency>
 
             <!--JUnit5-->
