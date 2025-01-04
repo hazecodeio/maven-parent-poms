@@ -33,11 +33,6 @@
         <maven.compiler.release>17</maven.compiler.release>
         <encoding>UTF-8</encoding>
 
-        <!--java-based utils-->
-        <spring.version>6.1.12</spring.version> <!--ToDo - Remove from core pom.xml-->
-        <hibernate.version>6.6.0.Final</hibernate.version> <!--ToDo - Remove from core pom.xml-->
-        <derby.version>10.17.1.0</derby.version> <!--ToDo - Remove from core pom.xml-->
-
         <commons-io.version>2.18.0</commons-io.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
         <commons-collections4.version>4.5.0-M3</commons-collections4.version>
@@ -104,50 +99,6 @@
 
     <dependencyManagement>
         <dependencies>
-            
-            <!--ToDo - Remove from core pom.xml-->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>${spring.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <!--ToDo - Remove from core pom.xml-->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <!--ToDo - Remove from core pom.xml-->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-
-
-            <!--ToDo - Remove from core pom.xml-->
-            <!--MySQL-->
-            <!--<dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.21</version>
-            </dependency>-->
-
-            <!--ToDo - Remove from core pom.xml-->
-            <!--Derby-->
-            <dependency>
-                <groupId>org.apache.derby</groupId>
-                <artifactId>derby</artifactId>
-                <version>${derby.version}</version>
-            </dependency>
-            <!--ToDo - Remove from core pom.xml-->
-            <dependency>
-                <groupId>org.apache.derby</groupId>
-                <artifactId>derbytools</artifactId>
-                <version>${derby.version}</version>
-            </dependency>
-
             <!--Commons-->
             <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
             <dependency>
