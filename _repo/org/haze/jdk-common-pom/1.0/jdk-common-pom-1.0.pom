@@ -18,19 +18,13 @@
         </repository>
     </distributionManagement>
 
-    <artifactId>java_17-pom</artifactId>
+    <artifactId>jdk-common-pom</artifactId>
     <version>1.0</version>
 
     <packaging>pom</packaging>
 
-
     <properties>
         <!--common-->
-
-        <java.version>17</java.version>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.release>17</maven.compiler.release>
         <encoding>UTF-8</encoding>
 
         <commons-io.version>2.18.0</commons-io.version>
@@ -38,7 +32,7 @@
         <commons-collections4.version>4.5.0-M3</commons-collections4.version>
 
         <!-- Log -->
-        <log4j2.version>2.23.1</log4j2.version>  <!--ToDo - Remove from core pom.xml-->
+        <log4j2.version>2.24.3</log4j2.version>  <!--ToDo - Remove from core pom.xml-->
 
         <!-- test -->
         <junit4.version>4.13.2</junit4.version>
@@ -68,18 +62,6 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit5.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <version>${junit5.version}</version>
-            <scope>test</scope>
-        </dependency>-->
 
         <!--Hamcrest 2.x-->
         <dependency>
@@ -100,7 +82,6 @@
     <dependencyManagement>
         <dependencies>
             <!--Commons-->
-            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
@@ -125,25 +106,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 
     <build>
         <finalName>${project.name}</finalName>
-        <!--<pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.9.1</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.2.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
   <groupId>org.haze</groupId>
-  <artifactId>spring-boot_1.x-pom-parent</artifactId>
+  <artifactId>jdk17-pom</artifactId>
   <versioning>
     <release>1.0</release>
     <versions>

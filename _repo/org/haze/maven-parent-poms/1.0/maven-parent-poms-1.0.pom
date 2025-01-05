@@ -17,7 +17,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>java_17-pom</module>
+        <module>jdk-common-pom</module>
+        <module>jdk11-pom</module>
+        <module>jdk17-pom</module>
         <module>spring-boot_2.x-pom/_pom-parent/_pom-parent.xml</module>
         <module>spring-boot_1.x-pom/_pom-parent/_parent-pom.xml</module>
         <module>spring-framework_5.x-pom</module>
