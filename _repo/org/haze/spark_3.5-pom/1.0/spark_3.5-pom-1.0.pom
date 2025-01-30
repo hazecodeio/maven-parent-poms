@@ -30,12 +30,12 @@
         <encoding>UTF-8</encoding>
 
         <!-- scala lang -->
-        <scala.version>2.13.14</scala.version>
+        <scala.version>2.13.16</scala.version>
         <scala.compat.version>2.13</scala.compat.version>
         <scala.parallel.version>1.0.4</scala.parallel.version>
 
         <!--spark-->
-        <spark.version>3.5.2</spark.version>
+        <spark.version>3.5.4</spark.version>
         <opencsv.version>2.4</opencsv.version>
 
         <!-- test - scalatest/specs -->
