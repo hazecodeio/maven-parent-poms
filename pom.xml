@@ -26,6 +26,7 @@
         <module>spark_3.5-pom</module>
         <module>scala2_2.13-pom</module>
         <module>scala3-lts-pom</module>
+        <module>scala3.x-latest-pom</module>
     </modules>
 
 </project>
