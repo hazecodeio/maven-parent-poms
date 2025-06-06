@@ -35,7 +35,7 @@
         <scala.parallel.version>1.0.4</scala.parallel.version>
 
         <!--spark-->
-        <spark.version>3.5.5</spark.version>
+        <spark.version>3.5.6</spark.version>
         <opencsv.version>2.4</opencsv.version>
 
         <!-- test - scalatest/specs -->
